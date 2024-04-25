@@ -15,3 +15,14 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.muzimin.entity
+
+
+## eureka的客户端配置
+eureka:
+  client:
+    # 表示是否将自己注册进eurekaserver，默认为true
+    register-with-eureka: true
+    # 是否从eureka中抓取已有的注册信息，默认为true，单节点无所谓，集群必须设置为true才能配置ribbon使用负载均衡
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
