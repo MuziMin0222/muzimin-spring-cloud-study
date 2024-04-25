@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.muzimin.dao.PaymentDao">
+
+    <insert id="insertPayment" keyProperty="id" useGeneratedKeys="true">
+        insert into payment(serial) values(#{serial})
+    </insert>
+
+    <resultMap id="paymentByIdMap" type="com.muzimin.entity.Payment">
+        <result property="id" column="id" jdbcType="BIGINT"/>
+        <result property="serial" column="serial" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="selectPaymentById" resultMap="paymentByIdMap">
+        select * from payment where id = #{id}
+    </select>
+</mapper>
