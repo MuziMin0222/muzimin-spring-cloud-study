@@ -22,7 +22,7 @@ public class PaymentController {
     PaymentService paymentService;
 
     @PostMapping("/insert")
-    CommonResult<Payment> insertData(Payment payment) {
+    CommonResult<Payment> insertData(@RequestBody Payment payment) {
         int i = paymentService.insertPayment(payment);
         if (i > 0) {
             return new CommonResult<>(200, "数据插入成功", payment);
