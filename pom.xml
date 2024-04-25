@@ -11,6 +11,7 @@
         <module>cloud-01-payment-8001</module>
         <module>cloud-02-order-80</module>
         <module>cloud-03-api-common</module>
+        <module>cloud-04-eureka-7001</module>
     </modules>
     <packaging>pom</packaging>
 
