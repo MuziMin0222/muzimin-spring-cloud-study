@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @date: 2024-04-26 19:41
  **/
 @Component
+//CLOUD-01-PAYMENT eureka中注册的服务名称
 @FeignClient(value = "CLOUD-01-PAYMENT")
 public interface PaymentFeignService {
     @GetMapping(value = "/payment/select/{id}")
