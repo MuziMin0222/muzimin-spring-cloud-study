@@ -12,7 +12,8 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class WebConfig {
     @Bean
-    @LoadBalanced //开启负载均衡注解，指定算法，默认是轮询
+    //在使用自定义LB时，需要注释他
+    //@LoadBalanced //开启负载均衡注解，指定算法，默认是轮询
     RestTemplate getRestTemplate() {
         return new RestTemplate();
     }

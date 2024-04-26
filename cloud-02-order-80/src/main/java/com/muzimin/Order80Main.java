@@ -12,7 +12,8 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
  **/
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(name = "CLOUD-01-PAYMENT", configuration = MySelfRule.class)
+// 启动该服务时去加载自定义的ribbon配置
+//@RibbonClient(name = "CLOUD-01-PAYMENT", configuration = MySelfRule.class)
 public class Order80Main {
     public static void main(String[] args) {
         SpringApplication.run(Order80Main.class, args);
