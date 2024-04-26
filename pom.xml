@@ -19,6 +19,7 @@
         <module>cloud-09-payment-consul-8004</module>
         <module>cloud-10-order-consul-80</module>
         <module>cloud-11-ribbon-rule</module>
+        <module>cloud-12-order-openfeign-80</module>
     </modules>
     <packaging>pom</packaging>
 
