@@ -6,9 +6,12 @@ import com.muzimin.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author: 李煌民
@@ -24,6 +27,21 @@ public class PaymentController {
 
     @Value("${server.port}")
     String port;
+
+    @Autowired
+    DiscoveryClient discoveryClient;
+
+    @GetMapping("/discover")
+    Object discoverServer() {
+        List<String> services = discoveryClient.getServices();
+        for (String service : services) {
+            List<ServiceInstance> instances = discoveryClient.getInstances(service);
+            for (ServiceInstance instance : instances) {
+                log.info("{} \t {} \t {} \t {} \t {}", instance.getInstanceId(), instance.getHost(), instance.getPort(), instance.getUri(), instance.getServiceId());
+            }
+        }
+        return discoveryClient;
+    }
 
     @PostMapping("/insert")
     CommonResult<Payment> insertData(@RequestBody Payment payment) {
