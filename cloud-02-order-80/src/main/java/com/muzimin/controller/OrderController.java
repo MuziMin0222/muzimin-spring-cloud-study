@@ -13,7 +13,9 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping("/order")
 public class OrderController {
-    String BaseUrl = "http://localhost:8001";
+    // String BaseUrl = "http://localhost:8001";
+    // 改成微服务名称，每次访问都去eureka中拿地址，就回轮训拿，达到负载均衡效果
+    String BaseUrl = "http://CLOUD-01-PAYMENT";
 
     @Autowired
     RestTemplate restTemplate;

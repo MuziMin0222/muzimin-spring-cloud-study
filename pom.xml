@@ -13,6 +13,7 @@
         <module>cloud-03-api-common</module>
         <module>cloud-04-eureka-7001</module>
         <module>cloud-05-eureka-7002</module>
+        <module>cloud-06-payment-8002</module>
     </modules>
     <packaging>pom</packaging>
 
