@@ -20,6 +20,8 @@
         <module>cloud-10-order-consul-80</module>
         <module>cloud-11-ribbon-rule</module>
         <module>cloud-12-order-openfeign-80</module>
+        <module>cloud-13-payment-hystrix-8001</module>
+        <module>cloud-14-order-openfeign-hystrix-80</module>
     </modules>
     <packaging>pom</packaging>
 
