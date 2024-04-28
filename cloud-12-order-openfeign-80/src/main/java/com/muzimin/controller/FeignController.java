@@ -25,4 +25,9 @@ public class FeignController {
     CommonResult<Payment> helloFeign(@PathVariable int id) {
         return paymentFeignService.getPaymentById(id);
     }
+
+    @GetMapping("/timeout")
+    CommonResult<String> feignTimeOutTest() {
+        return paymentFeignService.testFeignTimeOUt();
+    }
 }
