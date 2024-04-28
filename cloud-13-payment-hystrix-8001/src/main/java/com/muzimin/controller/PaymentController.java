@@ -40,6 +40,20 @@ public class PaymentController {
         return paymentService.paymentServiceTimeOut();
     }
 
+    @GetMapping("/logic-error")
+    //当请求的逻辑发生了错误时，也可以通过Hystrix进行服务降级
+    @HystrixCommand(
+            fallbackMethod = "pymentHandler",
+            commandProperties = {@HystrixProperty(
+                    name = "execution.isolation.thread.timeoutInMilliseconds",
+                    value = "3000"
+            )}
+    )
+    public String paymentServiceLogicError() {
+        int i = 10 / 0;
+        return paymentService.paymentServiceTimeOut();
+    }
+
     public String pymentHandler() {
         return "服务器繁忙或出错，请稍后重试😭";
     }
