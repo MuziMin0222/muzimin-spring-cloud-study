@@ -22,6 +22,7 @@
         <module>cloud-12-order-openfeign-80</module>
         <module>cloud-13-payment-hystrix-8001</module>
         <module>cloud-14-order-openfeign-hystrix-80</module>
+        <module>cloud-15-hystrix-dashboard-9001</module>
     </modules>
     <packaging>pom</packaging>
 
