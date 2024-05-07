@@ -24,6 +24,7 @@
         <module>cloud-14-order-openfeign-hystrix-80</module>
         <module>cloud-15-hystrix-dashboard-9001</module>
         <module>cloud-16-gateway-9527</module>
+        <module>cloud-17-config-3344</module>
     </modules>
     <packaging>pom</packaging>
 
