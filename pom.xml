@@ -25,6 +25,7 @@
         <module>cloud-15-hystrix-dashboard-9001</module>
         <module>cloud-16-gateway-9527</module>
         <module>cloud-17-config-3344</module>
+        <module>cloud-19-config-client-3355</module>
     </modules>
     <packaging>pom</packaging>
 
