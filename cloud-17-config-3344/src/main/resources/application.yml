@@ -10,9 +10,15 @@ spring:
         git:
           uri: https://github.com/MuziMin0222/muzimin-spring-cloud-study.git #GitHub上面的git仓库名字
           search-paths: #搜索目录
-            - muzimin-spring-cloud-study/cloud-18-config-files
+            - cloud-18-config-files
       label: main #读取分支
       #启动成功后访问的路径 http://ip:3344/{label}/{application}-{profile}.yml 能访问的配置文件 就表示成功了
+    #rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 15672
+    username: root
+    password: 123456
 
 # eureka的客户端配置
 eureka:
@@ -33,3 +39,10 @@ eureka:
     lease-renewal-interval-in-seconds: 1
     # eureka服务端在收到最后一次心跳后等待时间上限，单位为秒（默认是90S），超时将会剔除服务
     lease-expiration-duration-in-seconds: 2
+
+##rabbitmq相关配置,暴露bus刷新配置的端点 SpringCloud Bus动态刷新全局广播
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
