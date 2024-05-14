@@ -33,6 +33,7 @@
         <module>cloudalibaba-24-nacos-9001</module>
         <module>cloudalibaba-25-nacos-9002</module>
         <module>cloudalibaba-26-nacos-client-83</module>
+        <module>cloudalibaba-27-nacos-config-3377</module>
     </modules>
     <packaging>pom</packaging>
 
