@@ -30,6 +30,8 @@
         <module>cloud-21-stream-producer-8801</module>
         <module>cloud-22-stream-consumer-8802</module>
         <module>cloud-23-stream-consumer-8803</module>
+        <module>cloudalibaba-24-nacos-9001</module>
+        <module>cloudalibaba-25-nacos-9002</module>
     </modules>
     <packaging>pom</packaging>
 
