@@ -1,0 +1,20 @@
+server:
+  port: 83
+
+spring:
+  application:
+    name: cloudalibaba-26-nacos-client-83
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #配置Nacos地址
+
+#端口暴漏
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+service-url:
+  nacos-user-service: http://cloudalibaba-nacos
