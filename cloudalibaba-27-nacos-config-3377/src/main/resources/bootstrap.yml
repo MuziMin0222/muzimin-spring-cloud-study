@@ -11,9 +11,10 @@ spring:
       config:
         server-addr: localhost:8848 #配置中心地址
         file-extension: yaml #指定yaml格式的配置
+        group: DEV_GROUP  # 指定group
+        namespace: 912eccb8-4d1d-43a0-80c5-0dc6ca5805f6  # 指定命名空间
 
 # ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
-# nacos-config-client-dev.yaml
-
-# nacos-config-client-test.yaml   ----> config.info
+# cloudalibaba-27-nacos-config-3377-dev.yaml
+# cloudalibaba-27-nacos-config-3377-test.yaml   ----> config.info
 
